@@ -1,146 +1,150 @@
-Alice Margatroid
-Aunn Komano
-Aya Shameimaru
-Benben Tsukumo
-Byakuren Hijiri
-Chen
-Chiyuri Kitashirakawa
-Cirno
-Clownpiece
-Daiyousei
-Doremy Sweet
-Eika Ebisu
-Eirin Yagokoro
-Elis
-Ellen
-Elly
-Eternity Larva
-Flandre Scarlet
-Fujiwara no Mokou
-Gengetsu
-Genjii
-Hata no Kokoro
-Hatate Himekaidou
-Hecatia Lapislazuli
-Hieda no Akyu
-Hina Kagiyama
-Hong Meiling
-Hourai
-Ichirin Kumoi
-Iku Nagae
-Jo'on Yorigami
-Junko
-Kagerou Imaizumi
-Kaguya Houraisan
-Kana Anaberal
-Kanako Yasaka
-Kasen Ibara
-Keiki Haniyasushin
-Keine Kamishirasawa
-Kikuri
-Kisume
-Koakuma
-Kogasa Tatara
-My sister! How are you doing that?
-Komachi Onozuka
-Konngara
-Kotohime
-Kurumi
-Kutaka Niwatari
-Kyouko Kasodani
-Layla Prismriver
-Letty Whiterock
-Lily White
-Louise
-Luna Child
-Lunasa Prismriver
-Lyrica Prismriver
-Mai Teireida
-Mamizou Futatsuiwa
-Maribel Han
-Marisa Kirisame
-Mayumi Joutouguu
-Medicine Melancholy
-Meira
-Merlin Prismriver
-Mima
-Minamitsu Murasa
-Minoriko Aki
-Momiji Inubashiri
-Mononobe no Futo
-Mugetsu
-Mystia Lorelei
-Narumi Yatadera
-Nazrin
-Nemuno Sakata
-Nitori Kawashiro
-Nue Houjuu
-Okina Matara
-Orange
-Parsee Mizuhashi
-Patchouli Knowledge
-Raiko Horikawa
-Ran Yakumo
-Reimu Hakurei
-Rei'sen
-Reisen Udongein Inaba
-Remilia Scarlet
-Renko Usami
-Rika
-Rikako Asakura
-Ringo
-My cat! Sorry, but only I get to pet her luscious fur
-Rin Satsuki
-Rinnosuke Morichika
-Rumia
-Ruukoto
-Sagume Kishin
-Saki Kurokoma
-Sakuya Izayoi
-Sanae Kochiya
-Sara
-Sariel
-Satono Nishida
-Me? You'd better stop before I get angry
-Seiga Kaku
-Seija Kijin
-Seiran
-Sekibanki
-Shanghai
-Shikieiki Yamaxanadu
-Shingyoku
-Shinki
-Shinmyoumaru Sukuna
-Shion Yorigami
-Shizuha Aki
-Shou Toramaru
-Soga no Tojiko
-Sokrates
-Star Sapphire
-Suika Ibuki
-Sumireko Usami
-Sunny Milk
-Suwako Moriya
-Tenshi Hinanawi
-Tewi Inaba
-Tokiko
-Toyosatomimi no Miko
-Unzan
-Urumi Ushizaki
-My pet raven! You'd better not be thinking of anything funny
-Wakasagihime
-Watatsuki no Toyohime
-Watatsuki no Yorihime
-Wriggle Nightbug
-Yachie Kicchou
-Yamame Kurodani
-Yatsuhashi Tsukumo
-Yoshika Miyako
-Youmu Konpaku
-Yukari Yakumo
-Yuki
-Yumeko
-Yumemi Okazaki
-Yuugi Hoshiguma
-Yuuka Kazami
-Yuyuko Saigyouji
+Alice Margatroid (Windows era) w
+Alice Margatroid (pc-98 era) p
+Aunn Komano w
+Aya Shameimaru w
+Benben Tsukumo w
+Byakuren Hijiri w
+Chen w
+Chiyuri Kitashirakawa p
+Cirno w
+Clownpiece w
+Daiyousei w
+Doremy Sweet w
+Eika Ebisu w
+Eirin Yagokoro w
+Elis p
+Ellen p
+Elly p
+Eternity Larva w
+Flandre Scarlet w
+Fujiwara no Mokou w
+Gengetsu p
+Genjii p
+Hata no Kokoro w
+Hatate Himekaidou w
+Hecatia Lapislazuli w
+Hieda no Akyu w
+Hina Kagiyama w
+Hong Meiling w
+Hourai w
+Ichirin Kumoi w
+Iku Nagae w
+Jo'on Yorigami w
+Junko w
+Kagerou Imaizumi w
+Kaguya Houraisan w
+Kana Anaberal p
+Kanako Yasaka w
+Kasen Ibara w
+Keiki Haniyasushin w
+Keine Kamishirasawa w
+Kikuri p
+Kisume w
+Koakuma w
+Kogasa Tatara w
+My sister! How are you doing that? w
+Komachi Onozuka w
+Konngara p
+Kotohime p
+Kurumi p
+Kutaka Niwatari w
+Kyouko Kasodani w
+Layla Prismriver w
+Letty Whiterock w
+Lily White w
+Louise p
+Luna Child w
+Lunasa Prismriver w
+Lyrica Prismriver w
+Mai Teireida w
+Mamizou Futatsuiwa w
+Maribel Han w
+Marisa Kirisame (Windows era) w
+Marisa Kirisame (pc-98 era) p
+Mayumi Joutouguu w
+Medicine Melancholy w
+Meira p
+Merlin Prismriver w
+Mima p
+Minamitsu Murasa w
+Minoriko Aki w
+Momiji Inubashiri w
+Mononobe no Futo w
+Mugetsu p
+Mystia Lorelei w
+Narumi Yatadera w
+Nazrin w
+Nemuno Sakata w
+Nitori Kawashiro w
+Nue Houjuu w
+Okina Matara w
+Orange p
+Parsee Mizuhashi w
+Patchouli Knowledge w
+Raiko Horikawa w
+Ran Yakumo w
+Reimu Hakurei (Windows era) w
+Reimu Hakurei (pc-98 era) p
+Rei'sen w
+Reisen Udongein Inaba w
+Remilia Scarlet w
+Renko Usami w
+Rika p
+Rikako Asakura p
+Ringo p
+My cat! Sorry, but only I get to pet her luscious fur w
+Rin Satsuki w
+Rinnosuke Morichika w
+Rumia w
+Ruukoto p
+Sagume Kishin w
+Saki Kurokoma p
+Sakuya Izayoi w
+Sanae Kochiya w
+Sara p
+Sariel p
+Satono Nishida w
+Me? You'd better stop before I get angry w
+Seiga Kaku w
+Seija Kijin w
+Seiran p
+Sekibanki w
+Shanghai w
+Shikieiki Yamaxanadu w
+Shingyoku p
+Shinki p
+Shinmyoumaru Sukuna w
+Shion Yorigami w
+Shizuha Aki w
+Shou Toramaru w
+Soga no Tojiko w
+Sokrates p
+Star Sapphire w
+Suika Ibuki w
+Sumireko Usami w
+Sunny Milk w
+Suwako Moriya w
+Tenshi Hinanawi w
+Tewi Inaba w
+Tokiko w
+Toyosatomimi no Miko w
+Unzan w
+Urumi Ushizaki w
+My pet raven! You'd better not be thinking of anything funny w
+Wakasagihime w
+Watatsuki no Toyohime w
+Watatsuki no Yorihime w
+Wriggle Nightbug w
+Yachie Kicchou w
+Yamame Kurodani w
+Yatsuhashi Tsukumo w
+Yoshika Miyako w
+Youmu Konpaku w
+Yukari Yakumo w
+Yuki p
+Yumeko p
+Yumemi Okazaki p
+Yuugi Hoshiguma w
+Yuuka Kazami (Windows era) w
+Yuuka Kazami (pc-98 era) p
+Yuyuko Saigyouji w
