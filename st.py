@@ -1,10 +1,15 @@
 #!/usr/bin/python3
 from random import choice
 from os import environ
+import re
 #######
 import discord
 import requests
 from googleapiclient.discovery import build
+
+def escape_ansi(line):
+    ansi_escape =re.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/ ]*[@-~]')
+    return ansi_escape.sub('', line)
 
 async def get_first_utube_vid(query):
     request = youtube.search().list(
@@ -34,23 +39,38 @@ class Satorin(discord.Client):
         if message.author == self.user:
             return
 
-        if message.content.startswith(f"{self.prefix}touhou"):
+        msgtext = message.content
+
+        if msgtext.startswith(f"{self.prefix}w")\
+        or msgtext.startswith(f"{self.prefix}weather"):
+            if len(msgtext.split()) == 1:
+                await message.channel.send("Add the name of your city to get the weather.")
+            else:
+                city = msgtext.split(maxsplit=1)[1].replace(" ", "+")
+                weather = requests.get("https://wttr.in/{}".format(city))
+                weather = weather.content.decode("utf-8")
+                weather = "\n".join(weather.split("\n")[:7])
+                weather = escape_ansi(weather)
+                print(weather)
+                await message.channel.send("```{}```".format(weather))
+
+        if msgtext.startswith(f"{self.prefix}touhou"):
             chosen = choice(self.toohus)
             await message.channel.send(
                     "In your heart of hearts, you're thinking of... {}!".format(chosen)
                     )
 
-        if message.content.startswith(f"{self.prefix}motif"):
+        if msgtext.startswith(f"{self.prefix}motif"):
             chosen = choice(self.motifs)
             await message.channel.send(
                     "Your mythologic motif is...\n`{}`".format(chosen)
                     )
 
-        if message.content.startswith(f"{self.prefix}yt"):
-            query = message.content.split()
+        if msgtext.startswith(f"{self.prefix}yt"):
+            query = msgtext.split()
             print(query)
             if len(query) < 2:
-                await message.channel.send( "Give me a term to search!".format(queue))
+                await message.channel.send( "Give me a term to search!" )
                 return
             query = query[1:]
             url = await get_first_utube_vid(" ".join(query))
