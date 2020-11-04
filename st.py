@@ -19,7 +19,10 @@ async def get_first_utube_vid(query):
         type="video"
         )
     response = request.execute()
-    return "https://www.youtube.com/watch?v={}".format(response.get("items")[0].get("id").get("videoId"))
+    items = response.get("items")
+    if len(items) == 0:
+        return "No videos found!"
+    return "https://www.youtube.com/watch?v={}".format(items[0].get("id").get("videoId"))
 
 class Satorin(discord.Client):
     def __init__(self):
@@ -67,11 +70,17 @@ class Satorin(discord.Client):
                 await message.channel.send("Add the name of your city to get the weather.")
             else:
                 city = msgtext.split(maxsplit=1)[1].replace(" ", "+")
+
                 weather = requests.get("https://wttr.in/{}".format(city))
                 weather = weather.content.decode("utf-8")
-                weather = "\n".join(weather.split("\n")[:7])
-                weather = escape_ansi(weather)
-                await message.channel.send("```{}```".format(weather))
+                if city.lower() == "moon":
+                    weather = "\n".join(weather.split("\n")[:22])
+                    weather = escape_ansi(weather)
+                    await message.channel.send("```{}```".format(weather))
+                else:
+                    weather = "\n".join(weather.split("\n")[:7])
+                    weather = escape_ansi(weather)
+                    await message.channel.send("```{}```".format(weather))
 
         if msgtext.startswith(f"{self.prefix}motif"):
             chosen = choice(self.motifs)
