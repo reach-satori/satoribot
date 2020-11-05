@@ -14,18 +14,6 @@ def escape_ansi(line):
     ansi_escape =re.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/ ]*[@-~]')
     return ansi_escape.sub('', line)
 
-def get_first_utube_vid(query):
-    request = youtube.search().list(
-        part="snippet",
-        maxResults=5,
-        q=query,
-        type="video"
-        )
-    response = request.execute()
-    items = response.get("items")
-    if len(items) == 0:
-        return "No videos found!"
-    return "https://www.youtube.com/watch?v={}".format(items[0].get("id").get("videoId"))
 
 class Satorin(discord.Client):
     motifs = [x.rstrip() for x in open("motifs.txt", "r").readlines()]
@@ -46,7 +34,20 @@ class Satorin(discord.Client):
             "aa" : self.get_aa,
         }
 
-    def get_touhouchoice(self, message):
+    async def get_first_utube_vid(self, query):
+        request = youtube.search().list(
+            part="snippet",
+            maxResults=5,
+            q=query,
+            type="video"
+            )
+        response = await self.loop.run_in_executor(None, request.execute)
+        items = response.get("items")
+        if len(items) == 0:
+            return "No videos found!"
+        return "https://www.youtube.com/watch?v={}".format(items[0].get("id").get("videoId"))
+
+    async def get_touhouchoice(self, message):
         msgtext = message.content
         msg = msgtext.split()
         if len(msg) > 1:
@@ -58,18 +59,18 @@ class Satorin(discord.Client):
                 chosen = choice(self.pc98 + self.win)
         else:
             chosen = choice(self.pc98 + self.win)
-        return f"In your heart of hearts, you're thinking of... {chosen}!"
+        return f"In your heart of hearts, you're thinking of... {chosen}!", None
 
-    def get_motif(self, message):
-        return f"Your mythologic motif is {choice(self.motifs)}."
+    async def get_motif(self, message):
+        return f"Your mythologic motif is... \n`{choice(self.motifs)}`", None
 
-    def get_weather(self, message):
+    async def get_weather(self, message):
         msgtext = message.content
         msg = msgtext.split()
         if len(msg) == 1:
             return "Add the name of your city to get the weather."
         city = msgtext.split(maxsplit=1)[1].replace(" ", "+")
-        weather = requests.get(f"https://wttr.in/{city}")
+        weather = await self.loop.run_in_executor(None, requests.get, f"https://wttr.in/{city}")
         weather = weather.content.decode("utf-8")
         if city.lower() == "moon":
             weather = "\n".join(weather.split("\n")[:22])
@@ -77,22 +78,22 @@ class Satorin(discord.Client):
         else:
             weather = "\n".join(weather.split("\n")[:7])
             weather = escape_ansi(weather)
-        return f"```{weather}```"
+        return f"```{weather}```", None
 
-    def get_aa(self, message):
+    async def get_aa(self, message):
         aalist = glob.glob("./ascii/ascii_*")
         chosen = choice(aalist)
         doimage(chosen)
+        return None, discord.File("ascii.png")
 
-    def get_ytlink(self, message):
+    async def get_ytlink(self, message):
         msgtext = message.content
         query = msgtext.split(maxsplit=1)
         if len(query) < 2:
-            return "Give me a term to search!"
-
+            return "Give me a term to search!", None
         query = query[1]
-        url = get_first_utube_vid(" ".join(query))
-        return url
+        url = await self.get_first_utube_vid(" ".join(query))
+        return url, None
 
     async def on_ready(self):
         print('Logged in as')
@@ -109,11 +110,8 @@ class Satorin(discord.Client):
             msgtext = msgtext[1:].split()
             key = msgtext[0]
             if key in self.dispatcho:
-                ret = self.dispatcho[key](message)
-                if key == "aa":
-                    await message.channel.send(file=discord.File("ascii.png"))
-                else:
-                    await message.channel.send(ret)
+                msgout, f = await self.dispatcho[key](message)
+                await message.channel.send(msgout, file=f)
 
 bot = Satorin()
 
