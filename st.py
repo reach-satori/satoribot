@@ -2,10 +2,13 @@
 from random import choice
 from os import environ
 import re
+import glob
 #######
 import discord
 import requests
 from googleapiclient.discovery import build
+######
+from draw_ascii import doimage
 
 def escape_ansi(line):
     ansi_escape =re.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/ ]*[@-~]')
@@ -87,6 +90,13 @@ class Satorin(discord.Client):
             await message.channel.send(
                     "Your mythologic motif is...\n`{}`".format(chosen)
                     )
+
+        if msgtext.startswith(f"{self.prefix}aa"):
+            aalist = glob.glob("./ascii/ascii_*")
+            chosen = choice(aalist)
+            print(chosen)
+            doimage(chosen)
+            await message.channel.send(file=discord.File("ascii.png"))
 
         if msgtext.startswith(f"{self.prefix}yt"):
             query = msgtext.split()

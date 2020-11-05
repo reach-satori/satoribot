@@ -2,3 +2,7 @@ songs
 *.swp
 nohup.out
 output
+mona.ttf
+*.png
+__pycache__
+*.swo
